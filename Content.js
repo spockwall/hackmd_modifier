@@ -4,8 +4,14 @@ window.addEventListener("load", () => {
 	const config = { attributes: true, childList: true, subtree: true };
 	const callback = (mutationList, observer) => {
 		for (let i = 0; i < spans.length; i++) {
-			if (spans[i].innerText == "©") {
-				spans[i].innerText = "(c)";
+			for (let j = 0; j < spans[i].innerText.length; j++) {
+				if (spans[i].innerText[j] == "©") {
+					spans[i].innerText =
+						spans[i].innerText.slice(0, j) +
+						"(c)" +
+						spans[i].innerText.slice(j + 1, spans[i].innerText.length);
+					console.log("good");
+				}
 			}
 		}
 	};
