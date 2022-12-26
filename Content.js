@@ -22,7 +22,11 @@ window.addEventListener("load", () => {
 chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 	let sideList = document.getElementById("ui-toc-affix");
 	let doc = document.getElementById("doc");
-	sideList.remove();
-	doc.style.maxWidth = "1200px";
+	if (sideList) {
+		sideList.remove();
+	}
+	if (doc) {
+		doc.style.maxWidth = "1200px";
+	}
 	window.print();
 });

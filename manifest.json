@@ -2,7 +2,7 @@
 	"manifest_version": 4,
 	"name": "hackmd_modifier",
 	"description": "This extension is used to fix hackmd's compile problem",
-	"version": "2.0.0",
+	"version": "2.1.2",
 	"permissions": ["contextMenus", "tabs"],
 	"content_scripts": [
 		{
